@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: "REPLACE_ME_ECR_REPO"  # e.g. 123456789012.dkr.ecr.us-east-1.amazonaws.com/mlops-streamlit-ui
+  repository: "482227257362.dkr.ecr.us-east-1.amazonaws.com/mlops-streamlit-ui"
   tag: 5c5a73f
   pullPolicy: IfNotPresent
 
