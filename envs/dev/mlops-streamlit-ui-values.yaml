@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  repository: "REPLACE_ME_ECR_REPO"  # e.g. 123456789012.dkr.ecr.us-east-1.amazonaws.com/mlops-streamlit-ui
+  tag: "v1"
+  pullPolicy: IfNotPresent
+
+env:
+  API_URL: "http://fastapi:8000"
+  APP_VERSION: "1.0.0"
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8501
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+ingress:
+  enabled: false
